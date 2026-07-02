@@ -1,0 +1,9 @@
+[
+  {
+    "title": "E-Commerce Sales Analytics",
+    "description": "SQL + Power BI Project",
+    "page": "project/e_commerce_sales.html",
+    "datasetFile": "superstore.csv",
+    "datasetType": "csv"
+  }
+]
