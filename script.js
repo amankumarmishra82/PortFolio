@@ -212,15 +212,30 @@ lightbox.addEventListener("click", e => {
 
 
 const contactForm =
-    document.getElementById("contactForm");
+document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", e => {
+contactForm.addEventListener("submit",(e)=>{
 
-    e.preventDefault();
+e.preventDefault();
 
-    alert("Message Sent Successfully!");
+const btn=
+contactForm.querySelector("button");
 
-    contactForm.reset();
+btn.innerHTML="Sending...";
+
+setTimeout(()=>{
+
+btn.innerHTML="✅ Message Sent";
+
+contactForm.reset();
+
+setTimeout(()=>{
+
+btn.innerHTML="🚀 Send Message";
+
+},2000);
+
+},1500);
 
 });
 
