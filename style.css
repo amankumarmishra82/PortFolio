@@ -282,6 +282,44 @@ animation:pulse 1.5s infinite;
 
 }
 
+.hero-action{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+}
+
+.social-links{
+    display:flex;
+    gap:16px;
+}
+
+.social-links a{
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#1f2937;
+    color:#38bdf8;
+    font-size:22px;
+    transition:.35s;
+}
+
+.social-links a:hover{
+    background:#38bdf8;
+    color:white;
+    transform:translateY(-6px) scale(1.08);
+    box-shadow:0 0 20px rgba(56,189,248,.45);
+}
+
 /* Dashboard Cards */
 
 .hero-dashboard {
