@@ -115,7 +115,6 @@ function displayProjects(projects) {
     });
 
 
-    attachModalEvents();
 }
 
 const filterBtns =
