@@ -380,13 +380,64 @@ animation:pulse 1.5s infinite;
     gap: 20px;
 }
 
-.dashboard-card {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
+.dashboard-card{
 
-    transition: .3s;
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s ease;
+
+}
+
+.dashboard-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#38bdf8;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s ease;
+
+}
+
+.dashboard-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 15px 35px rgba(56,189,248,.18);
+
 }
 
 .dashboard-card:hover {
@@ -511,34 +562,6 @@ animation:pulse 1.5s infinite;
     }
 }
 
-.dashboard-card {
-
-    background:
-        rgba(255, 255, 255, .05);
-
-    border:
-        1px solid rgba(255, 255, 255, .1);
-
-    backdrop-filter:
-        blur(15px);
-
-    padding: 30px;
-    border-radius: 20px;
-
-    text-align: center;
-
-    transition: .4s;
-}
-
-.dashboard-card:hover {
-
-    transform:
-        translateY(-10px);
-
-    box-shadow:
-        0 0 30px rgba(56, 189, 248, .25);
-}
-
 
 .primary-btn {
 
@@ -623,23 +646,66 @@ animation:pulse 1.5s infinite;
     flex-wrap: wrap;
 }
 
-.stat-box {
+.stat-box{
 
-    background:
-        rgba(255, 255, 255, .05);
+    position:relative;
 
-    border:
-        1px solid rgba(255, 255, 255, .08);
+    overflow:hidden;
 
-    padding: 20px;
+    background:rgba(255,255,255,.05);
 
-    min-width: 130px;
+    border:1px solid rgba(255,255,255,.08);
 
-    text-align: center;
+    border-radius:15px;
 
-    border-radius: 15px;
+    backdrop-filter:blur(10px);
 
-    backdrop-filter: blur(10px);
+    padding:20px;
+
+    min-width:130px;
+
+    text-align:center;
+
+    transition:.35s ease;
+
+}
+
+.stat-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#38bdf8;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s ease;
+
+}
+
+.stat-box:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 15px 35px rgba(56,189,248,.18);
+
 }
 
 .stat-box h3 {
@@ -806,21 +872,24 @@ animation:pulse 1.5s infinite;
     gap: 25px;
 }
 
-.project-card {
+.project-card{
 
-    background:
-        rgba(255, 255, 255, .05);
+    position:relative;
 
-    border:
-        1px solid rgba(255, 255, 255, .08);
+    overflow:hidden;
 
-    border-radius: 20px;
+    background:rgba(255,255,255,.05);
 
-    padding: 25px;
+    border:1px solid rgba(255,255,255,.08);
 
-    backdrop-filter: blur(10px);
+    border-radius:20px;
 
-    transition: .4s;
+    padding:25px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+
 }
 
 .project-card:hover {
@@ -830,6 +899,46 @@ animation:pulse 1.5s infinite;
     box-shadow:
         0 0 25px rgba(56, 189, 248, .2);
 }
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#38bdf8;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s ease;
+
+}
+
+.project-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 15px 35px rgba(56,189,248,.18);
+
+}
+
+
 
 .project-card h3 {
 
@@ -856,6 +965,25 @@ animation:pulse 1.5s infinite;
     color: black;
 
     border-radius: 8px;
+}
+.dashboard-card i,
+.skill-card i,
+.stat-box i,
+.project-card i{
+
+    transition:.35s ease;
+
+}
+
+.dashboard-card:hover i,
+.skill-card:hover i,
+.stat-box:hover i,
+.project-card:hover i{
+
+    transform:scale(1.15) rotate(8deg);
+
+    color:#60a5fa;
+
 }
 
 .project-modal {
