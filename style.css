@@ -1049,50 +1049,143 @@ animation:pulse 1.5s infinite;
     cursor: pointer;
 }
 
-/* certification section  */
-.certificate-container {
+/* ==========================
+   Certification Section
+========================== */
 
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 25px;
+.certificate-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
 }
 
 .certificate-card{
+
     background:#1f2a44;
+    border:1px solid rgba(255,255,255,.08);
     border-radius:20px;
+
     padding:30px;
+
     min-height:340px;
+
     display:flex;
     flex-direction:column;
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Top Blue Line */
+
+.certificate-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#38bdf8;
+
+    transform:scaleX(0);
+
     transition:.35s;
+
 }
+
+.certificate-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.certificate-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 15px 35px rgba(56,189,248,.18);
+
+}
+
+/* Title */
+
 .certificate-card h3{
-    min-height:95px;
+
+    font-size:28px;
+
+    font-weight:700;
+
     line-height:1.35;
-    font-size:30px;
+
+    min-height:115px;
+
+    margin-bottom:15px;
+
+    color:#fff;
+
 }
+
+/* Issuer */
+
 .certificate-card p{
-    min-height:30px;
-    color:#c7d2fe;
-    margin-bottom:20px;
+
+    color:#bfc9d9;
+
+    font-size:18px;
+
+    margin-bottom:30px;
+
 }
-.certificate-card .view-certificate{
+
+/* Button Bottom */
+
+.certificate-card button{
+
     margin-top:auto;
-    align-self:flex-start;
+
+    width:100%;
+
 }
 
+/* Button Hover */
 
-.certificate-card:hover {
+.certificate-card button:hover{
 
-    transform: translateY(-8px);
+    transform:translateY(-3px);
 
-    box-shadow:
-        0 0 20px rgba(56, 189, 248, .25);
 }
 
+/* Responsive */
+
+@media(max-width:768px){
+
+.certificate-card{
+
+    min-height:auto;
+
+}
+
+.certificate-card h3{
+
+    min-height:auto;
+
+    font-size:24px;
+
+}
+
+}
 /* contact section  */
 .contact-wrapper{
 
