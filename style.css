@@ -1479,6 +1479,43 @@ grid-template-columns:1fr;
     box-shadow:
     0 0 20px rgba(56,189,248,.25);
 }
+.experience-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#38bdf8;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s ease;
+
+}
+
+.experience-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.experience-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 15px 35px rgba(56,189,248,.18);
+
+}
 
 .experience-card h3{
 
@@ -1592,6 +1629,44 @@ grid-template-columns:1fr;
     box-shadow:
     0 0 20px
     rgba(56,189,248,.25);
+}
+
+.skill-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:#38bdf8;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s ease;
+
+}
+
+.skill-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.skill-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#38bdf8;
+
+    box-shadow:0 15px 35px rgba(56,189,248,.18);
+
 }
 
 .skill-card i{
