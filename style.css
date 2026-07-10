@@ -1060,22 +1060,30 @@ animation:pulse 1.5s infinite;
     gap: 25px;
 }
 
-.certificate-card {
-
-    background:
-        rgba(255, 255, 255, .05);
-
-    border:
-        1px solid rgba(255, 255, 255, .08);
-
-    border-radius: 20px;
-
-    padding: 25px;
-
-    backdrop-filter: blur(10px);
-
-    transition: .4s;
+.certificate-card{
+    background:#1f2a44;
+    border-radius:20px;
+    padding:30px;
+    min-height:340px;
+    display:flex;
+    flex-direction:column;
+    transition:.35s;
 }
+.certificate-card h3{
+    min-height:95px;
+    line-height:1.35;
+    font-size:30px;
+}
+.certificate-card p{
+    min-height:30px;
+    color:#c7d2fe;
+    margin-bottom:20px;
+}
+.certificate-card .view-certificate{
+    margin-top:auto;
+    align-self:flex-start;
+}
+
 
 .certificate-card:hover {
 
