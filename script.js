@@ -210,34 +210,39 @@ lightbox.addEventListener("click", e => {
 });
 
 
-const contactForm =
-document.getElementById("contactForm");
+const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit",(e)=>{
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-e.preventDefault();
+    const btn = contactForm.querySelector("button");
+    btn.innerHTML = "Sending...";
 
-const btn=
-contactForm.querySelector("button");
+    emailjs.sendForm(
+        "service_ew2eoe9",
+        "template_djfytkx",
+        this,
+        "LKfCefoJbPBjXhlfT"
+    ).then(() => {
 
-btn.innerHTML="Sending...";
+        btn.innerHTML = "✅ Message Sent";
+        contactForm.reset();
 
-setTimeout(()=>{
+        setTimeout(() => {
+            btn.innerHTML = "🚀 Send Message";
+        }, 2000);
 
-btn.innerHTML="✅ Message Sent";
+    }).catch((error) => {
 
-contactForm.reset();
+        console.log(error);
 
-setTimeout(()=>{
+        btn.innerHTML = "❌ Failed";
 
-btn.innerHTML="🚀 Send Message";
-
-},2000);
-
-},1500);
-
+        setTimeout(() => {
+            btn.innerHTML = "🚀 Send Message";
+        }, 2000);
+    });
 });
-
 const themeBtn =
     document.querySelector(".theme-toggle");
 
