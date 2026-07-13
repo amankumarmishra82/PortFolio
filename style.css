@@ -39,20 +39,19 @@ body {
         1px solid rgba(255, 255, 255, .08);
 }
 
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 18px 20px;
+.navbar{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
 }
 
 .logo {
     font-size: 1.6rem;
     font-weight: 700;
+     margin-left:0;
 }
 
 .logo span {
