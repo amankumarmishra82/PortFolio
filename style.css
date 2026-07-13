@@ -1282,6 +1282,22 @@ animation:pulse 1.5s infinite;
 
 }
 
+.certificate-card img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-bottom:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
 /* Button Hover */
 
 .certificate-card button:hover{
