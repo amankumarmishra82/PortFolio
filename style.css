@@ -2121,3 +2121,196 @@ transform:translateY(-4px);
 color:white;
 
 }
+
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width: 992px){
+
+    section{
+        padding:70px 6%;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+    }
+
+    .hero-description{
+        margin:auto;
+    }
+
+    .hero-action{
+        justify-content:center;
+    }
+
+    .hero-dashboard{
+        width:100%;
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .about-image img{
+        width:260px;
+    }
+
+    .about-stats{
+        justify-content:center;
+    }
+
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .footer-links,
+    .footer-social{
+        align-items:center;
+    }
+
+}
+
+@media (max-width:768px){
+
+    section{
+        padding:60px 20px;
+    }
+
+    .navbar{
+        padding:15px 20px;
+    }
+
+    .logo{
+        font-size:1.5rem;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:120px;
+    }
+
+    .hero h1{
+        font-size:2.4rem;
+        line-height:1.2;
+    }
+
+    .hero h2{
+        font-size:1.3rem;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    .hero-dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-card{
+        padding:25px;
+    }
+
+    .dashboard-card h3{
+        font-size:1.7rem;
+    }
+
+    .hero-buttons{
+        width:100%;
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .social-links{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .certificate-container,
+    .experience-container,
+    #projects-container,
+    .gallery-container,
+    .skills-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .project-card,
+    .certificate-card,
+    .experience-card{
+        padding:20px;
+    }
+
+    .certificate-card h3{
+        font-size:22px;
+        min-height:auto;
+    }
+
+    .contact-info,
+    .contact-form{
+        padding:25px;
+    }
+
+    .info-item{
+        font-size:16px;
+        flex-wrap:wrap;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero h2{
+        font-size:1.1rem;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .dashboard-card{
+        padding:20px;
+    }
+
+    .project-card,
+    .certificate-card,
+    .experience-card{
+        border-radius:16px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        padding:15px;
+        font-size:15px;
+    }
+
+    .contact-form button{
+        padding:15px;
+        font-size:16px;
+    }
+
+    #topBtn{
+        width:45px;
+        height:45px;
+    }
+
+}
