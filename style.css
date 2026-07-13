@@ -19,26 +19,24 @@ body {
 
 /* Navbar */
 
-.header {
-
-    width: 100%;
-
+.header{
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+
+    width: 100%;
 
     z-index: 1000;
 
-    background:
-        rgba(15, 23, 42, .5);
+    background: rgba(15,23,42,.85);
 
-    backdrop-filter:
-        blur(20px);
+    backdrop-filter: blur(20px);
 
-    border-bottom:
-        1px solid rgba(255, 255, 255, .08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    padding-top: env(safe-area-inset-top);
 }
-
 .navbar{
     width:100%;
     display:flex;
@@ -140,6 +138,20 @@ section {
 
     .navbar{
         padding:18px 20px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .header{
+        top:0;
+        left:0;
+        width:100%;
+    }
+
+    .navbar{
+        padding:16px 20px;
     }
 
 }
