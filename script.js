@@ -50,28 +50,6 @@ let letter = "";
 })();
 
 
-const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add("show");
-        }
-    });
-
-});
-
-const sections =
-    document.querySelectorAll("section");
-
-sections.forEach(section => {
-
-    section.classList.add("hidden");
-
-    observer.observe(section);
-});
-
 const container =
     document.getElementById("projects-container");
 
@@ -391,7 +369,7 @@ new IntersectionObserver(entries=>{
     });
 
 },{
-    threshold:0.35
+    threshold:0.1
 });
 
 revealElements.forEach(section=>{
