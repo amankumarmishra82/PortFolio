@@ -221,14 +221,7 @@ contactForm.addEventListener("submit", function (e) {
         }, 2000);
     });
 });
-const themeBtn =
-    document.querySelector(".theme-toggle");
 
-themeBtn.addEventListener("click", () => {
-
-    document.body.classList.toggle("light-mode");
-
-});
 
 window.addEventListener("scroll", () => {
 
