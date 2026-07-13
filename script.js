@@ -376,81 +376,24 @@ revealElements.forEach(section=>{
 });
 
 // 
-document.addEventListener(
-"mousemove",
-(e)=>{
+document.addEventListener("mousemove",(e)=>{
 
-    const blobs =
-    document.querySelectorAll(
-    ".floating-bg span"
-    );
+    const blobs=document.querySelectorAll(".floating-bg span");
 
     blobs.forEach((blob,index)=>{
 
-        const speed =
-        (index+1)*0.005;
+        const speed=(index+1)*0.005;
 
-        const x =
-        (window.innerWidth/2-e.clientX)
-        *speed;
+        const x=(window.innerWidth/2-e.clientX)*speed;
+        const y=(window.innerHeight/2-e.clientY)*speed;
 
-        const y =
-        (window.innerHeight/2-e.clientY)
-        *speed;
-
-        blob.style.transform =
-        `translate(${x}px,${y}px)`;
-
-    });
-
-
-    // Active Navbar Link on Scroll
-
-const sectionsScroll = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sectionsScroll.forEach(section => {
-
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-
-        if (window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight) {
-
-            current = section.getAttribute("id");
-        }
-
-    });
-
-    navItems.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.classList.add("active");
-
-        }
+        blob.style.transform=`translate(${x}px,${y}px)`;
 
     });
 
 });
 
-
-
-// Close mobile menu after clicking any nav link
-const navItems = document.querySelectorAll(".nav-links a");
-
-navItems.forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
-});}); 
-
+ // Active Navbar Link
 const sections = document.querySelectorAll("section");
 const navLinksItems = document.querySelectorAll(".nav-links a");
 
@@ -463,11 +406,13 @@ window.addEventListener("scroll", () => {
         const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.offsetHeight;
 
-        if (window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight) {
-
-            current = section.getAttribute("id");
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            current = section.id;
         }
+
     });
 
     navLinksItems.forEach(link => {
@@ -477,6 +422,18 @@ window.addEventListener("scroll", () => {
         if (link.getAttribute("href") === "#" + current) {
             link.classList.add("active");
         }
+
+    });
+
+});
+
+// Close mobile menu
+navLinksItems.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
     });
 
 });
